@@ -1,0 +1,45 @@
+/*
+**	hud_fullscreen.menu modified by banz
+**	- fixed > 200 tokens error 
+**	- moved 'follow previous / next player' - text to the right side
+**
+**
+** 	thx to aerosoul94 for dumping this (ps3 version)
+**	thx to NTA for full ui_mp dump
+*/
+#include "ui/menudef.h"
+
+{
+	menuDef
+	{
+		name "hud_fullscreen"
+		rect 0 0 640 480 4 4
+		visible 1
+		forecolor 1 1 1 1
+		itemDef
+		{
+			rect 10 -50 10 10 8 10
+			visible 1
+			forecolor 1 1 1 1
+			type 19
+			textscale 0.3
+			textstyle 2
+			gamemsgwindowmode 1
+			visible when ( ( ! ( inkillcam( ) ) ) && ( ! ( ui_active( ) ) ) )
+		}
+		itemDef
+		{
+			rect 0 -60 10 10 9 9
+			visible 1
+			forecolor 1 1 1 1
+			type 19
+			textfont 10
+			textalign 1
+			textscale 0.375
+			textstyle 3
+			gamemsgwindowindex 1
+			gamemsgwindowmode 1
+			visible when ( ( ! ( inkillcam( ) ) ) && ( ! ( ui_active( ) ) ) )
+		}
+	}
+}

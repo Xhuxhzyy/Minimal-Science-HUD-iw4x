@@ -1,0 +1,104 @@
+{
+	menuDef
+	{
+		name "connect"
+		rect 0 0 640 480 0 0
+		style 1
+		forecolor 1 1 1 1
+		focuscolor 1 1 1 1
+		itemDef
+		{
+			rect -426.667 -240 893.333 520 2 2
+			decoration
+			visible 1
+			style 3
+			forecolor 0.95 0.95 0.95 1
+			background "$levelbriefing"
+			textscale 0.55
+			exp rect x ( -440 + ( sin ( milliseconds( ) / 3000 ) * 10) )
+		}
+        itemDef
+        {
+            rect 362 338 2 12 1 1
+            decoration
+            visible 1
+            style 3
+            forecolor 1 1 1 1
+	        background "white"
+            textscale 0.55
+        }
+        itemDef
+		{
+			rect 357 352 0 0 1 1
+			decoration
+			visible 1
+			forecolor 1 1 1 1
+			textfont 10
+			textAlign 2
+			textscale 0.4
+			textstyle 3
+			exp text ( gametypename( ) )
+		}
+		itemDef
+		{
+			rect 369 352 0 0 1 1
+			decoration
+			visible 1
+			forecolor 0.95 0.95 0.96 1
+			textfont 10
+			textAlign 0
+			textscale 0.4
+			textstyle 3
+			exp text ( getmapname( ) )
+		}
+		itemDef
+		{
+			rect -252 -100 504 2 2 3
+			decoration
+			visible 1
+			style 1
+			border 1
+			borderSize 1
+			forecolor 1 1 1 1
+			backcolor 1 1 1 0.2
+			borderColor 0 0 0 0.4
+			textscale 0.55
+			visible when ( !dvarbool( "wideScreen" ) )
+		}
+		itemDef
+		{
+			name "loadbar"
+			rect -252 -100 504 2 2 1
+			decoration
+			visible 1
+			style 6
+			forecolor 0.95 0.95 0.96 1
+			background "white"
+			textscale 0.55
+			visible when ( !dvarbool( "wideScreen" ) )
+		}
+		itemDef
+		{
+			rect -320 -50 640 2 2 3
+			decoration
+			visible 1
+			style 1
+			forecolor 1 1 1 1
+			backcolor 1 1 1 0.2
+			textscale 0.55
+			visible when ( dvarbool( "wideScreen" ) )
+		}
+		itemDef
+		{
+			name "loadbar"
+			rect -320 -50 640 2 2 3
+			decoration
+			visible 1
+			style 6
+			forecolor 0.95 0.95 0.96 1
+			background "white"
+			textscale 0.55
+			visible when ( dvarbool( "wideScreen" ) )
+		}
+	}
+}
